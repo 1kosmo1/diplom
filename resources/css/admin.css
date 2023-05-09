@@ -1,0 +1,110 @@
+@import "reset.css";
+@import "sidebar.css";
+@import "posts.css";
+@import "regions.css";
+@import "gallery.css";
+@import "users.css";
+@import "moderation.css";
+
+.content{
+    flex-grow: 1;
+}
+
+button[type="submit"]{
+    border: none;
+}
+
+.nothing{
+    margin-top: 25px;
+}
+
+.content-menu{
+    padding: 15px 25px 15px 25px;
+    box-shadow: 0 5px 5px #cdc9c9;
+}
+
+.content-menu > .menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-btn{
+    padding:8px 15px 8px 15px;
+    font-weight: bold;
+    color:white;
+    background: #00dc09;
+    border: none;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.edit-btn{
+    padding:8px 15px 8px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color:white;
+    background: #0fa8fd;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.delete-btn{
+    padding: 8px 15px 8px 15px;
+    background: red;
+    border-radius: 15px;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.back-btn{
+    padding: 8px 15px 8px 15px;
+    background: #a8a8a8;
+    border-radius: 15px;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.delete-btn:hover{
+    background: #e30101;
+}
+
+.back-btn:hover{
+    background: #9d9d9d;
+}
+
+.edit-btn:hover{
+    background: #1e98e3;
+}
+
+.create-btn:hover{
+    background: #00c008;
+}
+
+.search-btn{
+    padding:8px 15px 8px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.search-input{
+    padding:8px;
+    width: 300px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #cdc9c9;
+}
+
+.content-icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+

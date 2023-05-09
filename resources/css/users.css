@@ -1,0 +1,9 @@
+.users{
+    padding: 20px;
+}
+
+.users-table{
+    width: 100%;
+    margin-top: 0;
+    border-collapse: collapse;
+}

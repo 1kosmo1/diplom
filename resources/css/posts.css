@@ -1,0 +1,152 @@
+.content-inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px 25px 25px;
+}
+
+.post{
+    text-align: center;
+    width: 350px;
+    height: 460px;
+    margin-top: 25px;
+    margin-right: 40px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.post:nth-child(3){
+    margin-right: 0;
+}
+
+.title-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title-text{
+    display: inline-block;
+    margin-top: 15px;
+}
+.post-text{
+    font-size: 13px;
+    text-align: justify;
+    margin: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.post-image{
+    height: 300px;
+    overflow: hidden;
+}
+
+.post-image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.7s;
+}
+
+.post-image > img:hover{
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+
+.create-form, .edit-form{
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+}
+
+.create, .edit{
+    width: 100%;
+    display: flex;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group > textarea{
+    margin-top: 8px;
+    outline:none;
+    padding: 8px;
+    border: 1px solid #cdc9c9;
+    resize: none;
+}
+
+.form-group > select{
+    padding: 8px;
+    margin-top: 8px;
+    background: white;
+    border: 1px solid #cdc9c9;
+    border-radius: 5px;
+}
+
+.form-group > select:hover{
+    background: #f1f1f1;
+}
+
+.form-group > input{
+    outline:none;
+    padding: 8px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #cdc9c9;
+}
+
+.post-show{
+    padding: 30px;
+}
+
+.show-content{
+    display: flex;
+}
+
+.show-images{
+    width: 60%;
+
+}
+
+.show-image{
+    height: 500px;
+}
+
+.show-image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.show-info{
+    width: 50%;
+    margin-left: 30px;
+}
+
+.info-title{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #cdc9c9;
+}
+
+.info-region{
+    margin: 15px 0 15px 0;
+    font-size: 18px;
+}
+
+.info-description{
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+

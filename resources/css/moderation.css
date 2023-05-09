@@ -1,0 +1,61 @@
+.moderation{
+    padding: 20px;
+}
+
+.moderation-btns button{
+    color:white;
+    font-size: 20px;
+}
+
+.moderation .photo{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 420px;
+}
+
+.moderation .photo-up{
+    height: 80%;
+}
+
+.moderation .photo-up img{
+    height: 100%;
+}
+
+.moderation .photo-down{
+    position: relative;
+    margin-top: 10px;
+    align-items: normal;
+}
+
+.moderation .photo-down .moderation-btns{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.moderation-btns button{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+}
+
+.agree-btn{
+    background: #00dc09;
+    border-bottom-left-radius: 10px;
+}
+
+.agree-btn:hover{
+    background: #00ff09;
+}
+
+.disagree-btn{
+    background: #e30101;
+    border-bottom-right-radius: 10px;
+}
+
+.disagree-btn:hover{
+    background: #ff0000;
+}
