@@ -7,3 +7,28 @@
     margin-top: 0;
     border-collapse: collapse;
 }
+
+.user-gallery, .user-comments{
+    padding: 0 15px 15px 15px;
+}
+
+.user-comments .comments{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.link{
+    padding:8px 15px 8px 15px;
+    font-weight: bold;
+    color:white;
+    background:#D2691E;
+    border: none;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.link:hover{
+    background:#e57321;
+}

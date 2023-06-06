@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="create">
-        <form class="create-form" action="{{route('admin.posts.store')}}" method="post">
+        <form class="create-form" enctype="multipart/form-data" action="{{route('admin.posts.store')}}" method="post">
             @csrf
             <h3 style="margin-bottom: 30px">Создание поста</h3>
             <div class="form-group">
@@ -16,12 +16,20 @@
                 <input type="file" name="images[]" required multiple>
             </div>
             <div class="form-group">
-                <label for="">Местонахождение</label>
+                <label for="">Регион</label>
                 <select name="region_id">
                     @foreach($regions as $region)
                         <option value="{{$region->id}}">{{$region->name}}</option>
                     @endforeach
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="">Долгота</label>
+                <input name="dol" type="text" placeholder="88.888">
+            </div>
+            <div class="form-group">
+                <label for="">Широта</label>
+                <input name="shir" type="text" placeholder="88.888">
             </div>
             <div class="form-group">
                 <label for="">Описание достопримечательности</label>

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="create">
-        <form class="create-form" action="{{route('admin.posts.update',$post->id)}}" method="post">
+        <form class="create-form" enctype="multipart/form-data" action="{{route('admin.posts.update',$post->id)}}" method="post">
             @csrf
             @method('put')
             <h3 style="margin-bottom: 30px">Изменение поста</h3>
@@ -23,6 +23,14 @@
                         <option value="{{$region->id}}">{{$region->name}}</option>
                     @endforeach
                 </select>
+            </div>
+            <div class="form-group">
+                <label for="">Долгота</label>
+                <input name="dol" type="text" placeholder="88.888" value="{{$post->dol}}">
+            </div>
+            <div class="form-group">
+                <label for="">Широта</label>
+                <input name="shir" type="text" placeholder="88.888" value="{{$post->shir}}">
             </div>
             <div class="form-group">
                 <label for="">Описание достопримечательности</label>

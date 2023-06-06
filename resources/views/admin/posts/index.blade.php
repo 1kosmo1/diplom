@@ -14,10 +14,13 @@
             </div>
         </div>
         <div class="content-inner">
+            @if(count($posts) == 0)
+                <h3 class="nothing">Посты пока не добавлены</h3>
+            @else
             @foreach($posts as $post)
                 <div class="post">
                         <a class="post-image" style="display: block" href="{{route('admin.posts.show',$post->id)}}">
-                            <img src="{{asset('images/' . $post->photos()->first()->image)}}" alt="">
+                            <img src="{{asset('/storage/' . $post->photos()->first()->image)}}" alt="">
                         </a>
                     <div class="title-content">
                         <form method="post" action="{{route('admin.posts.destroy',$post->id)}}">
@@ -31,5 +34,7 @@
                     <p class="post-text">{{$post->text}}</p>
                 </div>
             @endforeach
+            @endif
         </div>
+
 @endsection

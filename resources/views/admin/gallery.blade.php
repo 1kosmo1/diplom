@@ -4,10 +4,13 @@
 
 @section('content')
     <div class="gallery">
+        @if(count($photos) == 0)
+            <h3 class="nothing">Фотографий пока нет</h3>
+        @else
         @foreach($photos as $photo)
             <div class="photo">
                 <div class="photo-up">
-                    <img src="{{asset('images/' . $photo->image)}}" alt="{{$photo->image}}">
+                    <img src="{{asset('storage/' . $photo->image)}}" alt="{{$photo->image}}">
                 </div>
                 <div class="photo-down">
                     @if($photo->user_id === null)
@@ -18,5 +21,6 @@
                 </div>
             </div>
         @endforeach
+        @endif
     </div>
 @endsection

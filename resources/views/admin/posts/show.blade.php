@@ -7,11 +7,14 @@
         <div class="show-content">
             <div class="show-images">
                 <div class="show-image">
-                    <img src="{{asset('images/' . $post->photos()->first()->image)}}" alt="">
+                    <img src="{{asset('/storage/' . $post->photos()->first()->image)}}" alt="">
+                    <div class="other-images">
+                        @foreach($post->photos()->get() as $photo)
+                            <img src="{{asset('/storage/' . $photo->image)}}" alt="">
+                        @endforeach
+                    </div>
                 </div>
             </div>
-
-
             <div class="show-info">
                 <p class="info-title">{{$post->title}}</p>
                 <p class="info-region"><b>Регион:</b> {{$post->region->name}}</p>

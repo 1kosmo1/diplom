@@ -9,12 +9,16 @@ use App\Http\Controllers\Admin\Users\UsersController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Public\IndexController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Profile\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::prefix('admin')->name('admin')->group(function(){
     Route::get('/',[AdminController::class,'index'])->name('.moderation');
+    Route::post('/allow/{image}',[AdminController::class,'allow'])->name('.allow');
+    Route::post('/notAllow/{image}',[AdminController::class,'notAllow'])->name('.notAllow');
+    Route::post('/addAllowedImages',[AdminController::class,'addAllowedImages'])->name('.addAllowedImages');
 
     Route::prefix('posts')->name('.posts')->group(function (){
         Route::get('/',[PostsController::class,'index'])->name('.index');
@@ -37,6 +41,8 @@ Route::prefix('admin')->name('admin')->group(function(){
 
     Route::prefix('users')->name('.users')->group(function (){
         Route::get('/',[UsersController::class,'index'])->name('.index');
+        Route::get('/{user}',[UsersController::class,'userInfo'])->name('.userInfo');
+        Route::put('/{user}',[UsersController::class,'update'])->name('.update');
     });
 
     Route::prefix('gallery')->name('.gallery')->group(function (){
@@ -48,8 +54,15 @@ Route::prefix('admin')->name('admin')->group(function(){
 Route::name('public')->group(function (){
    Route::get('/',[IndexController::class,'index'])->name('.index');
    Route::get('/show/{post}',[IndexController::class,'show'])->name('.show');
+   Route::get('/posts',[IndexController::class,'posts'])->name('.posts');
+   Route::get('/gallery',[IndexController::class,'gallery'])->name('.gallery');
+   Route::get('/sendMessage',[ProfileController::class,'sendMessage'])->name('.send');
    Route::get('/profile/{user}', [AuthController::class,'userProfile'])->middleware('auth')->name('.profile');
    Route::post('/register',[RegisterController::class,'store'])->name('.register');
    Route::post('/login',[AuthController::class,'store'])->name('.login');
+   Route::post('/logout',[AuthController::class,'logout'])->name('.logout');
+    Route::post('/addImage',[ProfileController::class,'addImage'])->name('.addImage');
+    Route::post('/addComment',[PostsController::class,'addComment'])->name('.addComment');
+
 });
 

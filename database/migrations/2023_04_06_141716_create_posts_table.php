@@ -15,11 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('text');
-
-
-
-
-
+            $table->double('dol');
+            $table->double('shir');
             $table->timestamps();
         });
     }

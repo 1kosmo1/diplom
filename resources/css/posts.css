@@ -113,6 +113,23 @@
 
 }
 
+.other-images{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.other-images img{
+    width: 88px;
+    object-fit: cover;
+    margin-right: 18px;
+    margin-top: 10px;
+}
+
+.other-images img:nth-child(6){
+    margin-right: 0;
+}
+
 .show-image{
     height: 500px;
 }

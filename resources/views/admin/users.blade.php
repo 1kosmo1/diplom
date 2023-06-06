@@ -4,31 +4,23 @@
 
 @section('content')
     <div class="users">
+        @if(count($users) == 0)
+            <h3 class="nothing">Пользователей пока нет</h3>
+        @else
         <table class="users-table">
             <tr>
                 <th>Логин</th>
-                <th>Пароль</th>
-                <th>Галлерея</th>
-                <th>Комментарии</th>
+                <th>Почта</th>
+                <th>Информация</th>
             </tr>
+            @foreach($users as $user)
             <tr>
-                <td>User</td>
-                <td>User password</td>
-                <td><a href="#">Перейти</a></td>
-                <td><a href="#">Просмотреть</a></td>
+                <td>{{$user->login}}</td>
+                <td>{{$user->email}}</td>
+                <td><a class="link" href="{{route('admin.users.userInfo',$user->id)}}">Перейти</a></td>
             </tr>
-            <tr>
-                <td>User</td>
-                <td>User password</td>
-                <td><a href="#">Перейти</a></td>
-                <td><a href="#">Просмотреть</a></td>
-            </tr>
-            <tr>
-                <td>User</td>
-                <td>User password</td>
-                <td><a href="#">Перейти</a></td>
-                <td><a href="#">Просмотреть</a></td>
-            </tr>
+            @endforeach
         </table>
+        @endif
     </div>
 @endsection

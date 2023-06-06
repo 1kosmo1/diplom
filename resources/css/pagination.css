@@ -1,0 +1,21 @@
+.pagination{
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-p{
+    color:#D1D7E0;
+    background: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 3px solid #4C495D;
+    cursor: pointer;
+}
+
+.item-p.active, .item-p :hover{
+    background: #564F6F;
+}
